@@ -1,17 +1,20 @@
-# AI Voice Assistant
+# AI Assistant Pro
 
 ## Overview
-AI Voice Assistant is a web-based, AI-powered application built with Streamlit. The application provides the following features:
-- **💬 Text Chat:** Communicate with an AI language model.
-- **🎤 Voice Chat:** Use voice commands to interact with the AI.
-- **📸 OCR Text Extraction:** Extract text from images with enhanced preprocessing.
-- **Real-time Speech Recognition:** Convert spoken queries into text.
+AI Assistant Pro is a web-based AI-powered application built with Streamlit. It integrates multiple functionalities to offer an interactive assistant experience including:
+- **Text Chat:** Conversational interaction powered by AI.
+- **Voice Chat:** Speak naturally and let the assistant respond.
+- **OCR + Chat:** Upload images to extract and analyze text.
+- **Favorites:** Save favorite interactions for quick reference.
+- **Export Chat:** Export conversation history as JSON.
 
 ## Features
-- **Interactive Chat:** Both text and voice interfaces let you ask questions and receive responses.
-- **OCR Capabilities:** Process images to extract text using Tesseract OCR with additional noise reduction and enhancement.
-- **Configurable Settings:** Options to toggle text-to-speech and view usage tips.
-- **User-Friendly Format:** A clean, intuitive UI provided by Streamlit.
+- **Multi-Modal Interaction:** Switch easily among text, voice, and OCR-based inputs.
+- **Advanced OCR:** Uses multiple preprocessing techniques for high-accuracy text extraction.
+- **Customizable AI Responses:** Select from different AI models and adjust parameters like creativity and response length.
+- **Text-to-Speech (TTS):** Converts text responses to spoken words for a hands-free experience.
+- **Session Statistics & System Info:** View current system status, session duration, and conversation counts.
+- **Data Management:** Easily export or clear chat histories and manage favorite responses.
 
 ## Installation and Setup
 
@@ -49,50 +52,53 @@ AI Voice Assistant is a web-based, AI-powered application built with Streamlit. 
 4. **Install Tesseract OCR:**
 
    - Download and install [Tesseract OCR](https://github.com/tesseract-ocr/tesseract).
-   - Verify or update the `pytesseract.pytesseract.tesseract_cmd` path in the code (see [main.py](c:\Users\MR\OneDrive\Desktop\AI_assistant\main.py)) to match your Tesseract installation.
+   - Update the Tesseract command path in [main.py](c:\Users\MR\OneDrive\Desktop\AI_assistant\main.py) if necessary:
+     ```python
+     pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+     ```
 
 ## Usage
 
-Start the application by running:
+Launch the application using Streamlit:
 
 ```sh
 streamlit run main.py
 ```
 
-Then, choose an action from the interface:
-- **💬 Text Chat:** Type your query into the text input and press "Send 📤" to receive a response.
-- **🎤 Voice Chat:** Click "🎤 Start Listening" to record your question. The application processes your speech and presents the response.
-- **📸 Extract Text from Image:** Upload an image. Use the "🔍 Extract Text" button to perform OCR. You can also ask follow-up questions about the extracted text.
+Once running, you can:
 
-## Files Included for Deployment
-- **main.py:** The main application source code containing the implementation of chat, voice recognition, and OCR functionalities.
-- **requirements.txt:** Lists all the dependencies required.
-- **Readme.md:** Documentation for the project.
-- **.gitignore:** Configured to exclude environment files and temporary files.
-- **(Optional) .env.example:** Consider adding this file as a guideline for required environment variables (do not include sensitive data).
+- **Chat:** Use the text input form for a conversation or click “Send” to see AI responses.
+- **Voice Chat:** Start a voice session by clicking “Start Voice Chat” for speech recognition and response.
+- **OCR + Chat:** Upload an image (or PDF) to extract text, then have the assistant summarize or analyze the extracted content.
+- **Data Management:** Export your chat history as JSON or clear the conversation using the sidebar options.
+- **Favorites:** Save favorite responses and quickly review them in the “Favorites” section.
 
-## Files Excluded from Deployment
-- **.env:** Actual environment file with sensitive data is excluded. Ensure it is listed in the [`.gitignore`](c:\Users\MR\OneDrive\Desktop\AI_assistant\.gitignore).
-- **Temporary/Debug Files:** Any caching, log, or Postman instruction files (configured within .gitignore) are not deployed.
+## Project Structure
+
+- **main.py:** The main application source code with the implementation of chat, voice recognition, OCR, TTS, export, and favorites.
+- **requirements.txt:** Lists all Python dependencies required by the application.
+- **.gitignore:** Configured to exclude sensitive files and temporary/development files.
+- **Readme.md:** This documentation file.
 
 ## Dependencies
-Key libraries and tools for this project:
 
 - [Streamlit](https://streamlit.io/)
 - [Pytesseract](https://pypi.org/project/pytesseract/)
 - [OpenCV (opencv-python)](https://pypi.org/project/opencv-python/)
 - [NumPy](https://numpy.org/)
 - [Pillow](https://pillow.readthedocs.io/)
-- [Groq](#) (Language model API client)
+- [Groq](#) (API client for AI language models)
 - [pyttsx3](https://pypi.org/project/pyttsx3/)
 - [SpeechRecognition](https://pypi.org/project/SpeechRecognition/)
 - [python-dotenv](https://pypi.org/project/python-dotenv/)
 
 ## License
+
 This project is free to use.
 
 ## Additional Information
-- **TTS and Voice Recognition:** The application leverages text-to-speech and voice recognition modules. In case of any loading or processing issues, make sure that microphone and audio configurations are correctly set up.
-- **Support:** For more details or troubleshooting, please refer to the code comments within [main.py](c:\Users\MR\OneDrive\Desktop\AI_assistant\main.py).
+- **Settings & Customization:** Adjust AI model, creativity (temperature), and maximum response length from the sidebar.
+- **System Info:** View live system status including TTS, OCR, and voice recognition readiness.
+- **Support:** For further details or troubleshooting, refer to inline comments in the [main.py](c:\Users\MR\OneDrive\Desktop\AI_assistant\main.py) file.
 
-Enjoy using the AI Voice Assistant!
+Enjoy using AI Assistant Pro!
