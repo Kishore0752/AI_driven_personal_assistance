@@ -80,6 +80,23 @@ Once running, you can:
 - **.gitignore:** Configured to exclude sensitive files and temporary/development files.
 - **Readme.md:** This documentation file.
 
+## 📸 Screenshots
+
+1. **Resume Upload Page**  
+   ![](images/s1.jpg)
+
+2. **Resume Preview & Analyze Button**  
+   ![](images/s2.jpg)
+
+3. **Skills & Grammar Analysis**  
+   ![](images/s3.jpg)
+
+4. **Section Detection & Score**  
+   ![](images/s4.jpg)
+
+5. **Downloadable Report**  
+   ![](images/s5.jpg)
+
 ## Dependencies
 
 - [Streamlit](https://streamlit.io/)
