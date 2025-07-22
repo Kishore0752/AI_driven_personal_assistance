@@ -1,0 +1,12 @@
+.env
+*.pyc
+__pycache__/
+*.log
+
+# Ignore Postman instruction files
+*post-r-pm-*.md
+*pre-r-pm-*.md
+*post-c-pm-*.md
+*pre-c-pm-*.md
+*post-f-pm-*.md
+*pre-f-pm
